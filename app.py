@@ -116,7 +116,7 @@ if st.button("Predict Final Score"):
         [study_hours, attendance, previous_score, assignments]
     ])
 
-    predicted_score = prediction[0]
+    predicted_score = max(0, min(100, prediction[0]))
 
     st.subheader("Prediction Result")
 
